@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class = "container">
     <ItemCard v-for="item in items" :key="items.name" :item="item"></ItemCard>
   </div>
 </template>
@@ -71,5 +71,10 @@ const items = [
 </script>
 
 <style scoped>
-
+.container{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 </style>
