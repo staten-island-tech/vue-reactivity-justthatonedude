@@ -1,11 +1,16 @@
 <template>
-  <div class = "container">
-    <ItemCard v-for="item in items" :key="items.name" :item="item"></ItemCard>
+  <div class="cart">
+    <ShopCart/>
   </div>
+  <div class = "container">
+    <ItemCard v-for="item in items" :key="items.name" :item="item"/>
+  </div>
+  
 </template>
 
 <script setup>
 import ItemCard from '@/components/ItemCard.vue';
+import ShopCart from '@/components/ShopCart.vue';
 const items = [
     {
         name: "Apex I",
@@ -68,10 +73,12 @@ const items = [
         img: "https://starforgesystems.com/cdn/shop/files/voyager-pro-product-img-cuouts.png?v=1699023001&width=832",
     },
 ]
+
 </script>
 
 <style scoped>
 .container{
+    width: 1024px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;

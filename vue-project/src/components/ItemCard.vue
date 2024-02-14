@@ -1,5 +1,5 @@
 <template>
-    <div class="productCard">
+    <div class="productCards">
         <h2>{{ item.name }}</h2>
         <img :src="item.img" alt="">
         <p>{{ item.processor }}</p>
@@ -16,11 +16,11 @@
 const props = defineProps({
     item: Object
 })
+import ShopCart from "./ShopCart.vue";
 import {ref} from "vue";
 let clicked = ref(0);
-const productContainer = document.querySelector(".productCard")
 function AddCart(){
-    productContainer.insertAdjacentHTML(
+    ShopCart.insertAdjacentHTML(
         'afterend','<div class="cart"><h2>Cart</h2></div>'
     )
 }
