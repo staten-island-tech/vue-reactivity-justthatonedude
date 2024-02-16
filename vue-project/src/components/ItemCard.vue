@@ -16,13 +16,13 @@
 const props = defineProps({
     item: Object
 })
-import ShopCart from "./ShopCart.vue";
 import {ref} from "vue";
+import { store } from "@/stores/ItemStore"
 let clicked = ref(0);
 function AddCart(){
-    ShopCart.insertAdjacentHTML(
-        'afterend','<div class="cart"><h2>Cart</h2></div>'
-    )
+    store.insertItem(props.item.name)
+    store.insertItem(props.item.price)
+    
 }
 </script>
 
