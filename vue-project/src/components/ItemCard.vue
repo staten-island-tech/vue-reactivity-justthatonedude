@@ -16,13 +16,10 @@
 const props = defineProps({
     item: Object
 })
-import {ref} from "vue";
 import { store } from "@/stores/ItemStore"
-let clicked = ref(0);
 function AddCart(){
-    store.insertItem(props.item.name)
-    store.insertItem(props.item.price)
-    
+    store.insertItem(props.item.name);
+    store.insertItem(props.item.price);
 }
 </script>
 

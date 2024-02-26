@@ -1,11 +1,10 @@
 <template>
-  <div class="cart">
-    <ShopCart/>
-  </div>
   <div class = "container">
     <ItemCard v-for="item in items" :key="items.name" :item="item"/>
   </div>
-  
+  <div class="cart">
+    <ShopCart/>
+  </div>
 </template>
 
 <script setup>
@@ -45,7 +44,7 @@ const items = [
     {
         name: "Apex IV",
         processor: "Intel Core i7-14700K",
-        graphics_card: "NVIDIA GeForce RTX 4070 Super",
+        graphics_card: "NVIDIA GeForce RTX 4070 Ti Super",
         ram: "32GB",
         storage: "1TB SSD",
         operating_system: "Windows 10 Home",
@@ -54,7 +53,7 @@ const items = [
     },
     {
         name: "Apex V",
-        processor: "AMD Ryzen 7 7700X3D",
+        processor: "AMD Ryzen 7 7800X3D",
         graphics_card: "NVIDIA GeForce RTX 4080 Super",
         ram: "32GB",
         storage: "2TB SSD",
