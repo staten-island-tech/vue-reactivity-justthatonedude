@@ -17,9 +17,11 @@ const props = defineProps({
     item: Object
 })
 import { store } from "@/stores/ItemStore"
+import { state } from "@/stores/ItemStore"
 function AddCart(){
     store.insertItem(props.item.name);
     store.insertItem(props.item.price);
+    state.count += props.item.price;
 }
 </script>
 
@@ -52,10 +54,13 @@ img{
     height: 300px;
     object-fit: cover;
 }
-.productCard{
-    border-radius: px;
-    border: 4px solid #000000 ;
-    margin: 10px;
+.productCards{
+  width: 310px;
+  height: 600px;
+  border-radius: 20px;
+  transition: 700ms;
+  background: linear-gradient(43deg,#f5f5fa 46%, #9698c3 100%);
+
 }
 .btn:hover {
     background-color: #6200ee;

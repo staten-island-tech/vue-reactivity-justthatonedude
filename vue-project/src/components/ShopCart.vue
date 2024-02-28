@@ -1,16 +1,19 @@
 <template>
     <div class="cart">
     <h2>Cart</h2>
-    <p>{{store.items}}</p>
+    <p>{{store.items.toString()}}</p>
+    <p>Total: ${{ state.count }}</p>
     <button class="btn" @click="ClearCart">Clear Cart</button>
   </div>
 </template>
 
 <script setup>
 import { store } from "@/stores/ItemStore"
+import { state } from "@/stores/ItemStore"
 function ClearCart(){
   store.items = [];
 }
+
 </script>
 
 <style scoped>

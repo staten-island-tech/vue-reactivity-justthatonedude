@@ -7,3 +7,6 @@ export const store = reactive({
     this.items.push(item)
   }
 })
+export const state = reactive({
+  count: 0
+})
