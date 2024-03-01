@@ -12,6 +12,7 @@ import { store } from "@/stores/ItemStore"
 import { state } from "@/stores/ItemStore"
 function ClearCart(){
   store.items = [];
+  state.count = 0;
 }
 
 </script>
